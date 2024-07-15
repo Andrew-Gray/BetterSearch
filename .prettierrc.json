@@ -1,0 +1,16 @@
+{
+	"trailingComma": "none",
+	"useTabs": true,
+	"tabWidth": 4,
+	"semi": true,
+	"singleQuote": false,
+	"printWidth": 5000,
+	"singleAttributePerLine": true,
+	"vueIndentScriptAndStyle": true,
+	"arrowParens": "always",
+	"bracketSameLine": true,
+	"bracketSpacing": true,
+	"plugins": [
+		"prettier-plugin-tailwindcss"
+	]
+}
