@@ -44,6 +44,10 @@
 	const textRowCount = ref(4);
 	const pageLoaded = ref(false);
 
+	const vFocus = {
+		mounted: (el) => el.focus()
+	};
+
 	const search = () => {
 		let text = searchText.value;
 		if (text == null || text.trim() === "") return;
@@ -81,7 +85,7 @@
 		openInNewTabUpdated.value = e;
 	};
 
-	onMounted(async () => {
+	onMounted(() => {
 		if (window.innerWidth < 640) {
 			textRowCount.value = 5;
 		} else {
@@ -128,6 +132,7 @@
 				<div class="absolute -inset-1 -z-10 rounded-lg bg-gradient-to-br from-blue-500 to-fuchsia-500" />
 
 				<Textarea
+					v-focus
 					v-model="searchText"
 					:rows="textRowCount"
 					placeholder="Type your search query here"
